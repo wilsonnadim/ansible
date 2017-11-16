@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+
+    - name: disable SELINUX
+      selinux:
+        policy: targeted
+        state: enforcing
