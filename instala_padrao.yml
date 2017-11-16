@@ -1,0 +1,28 @@
+---
+- hosts: all
+  tasks:
+
+    - name: Install EPEL-RELEASE Repository
+      yum:
+        name: epel-release
+        state: latest
+
+    - name: Update all packages
+      yum:
+        name: '*'
+        state: latest
+
+    - name: Install HTOP
+      yum:
+        name: htop
+        state: latest
+
+    - name: Install ATOP
+      yum:
+        name: atop
+        state: latest
+
+    - name: Install Glances
+      yum:
+        name: glances
+        state: latest
